@@ -1,0 +1,160 @@
+/* Extra large devices (large laptops and desktops, 1200px and up)  */
+@media only screen and (min-width: 1201px) {
+
+  /* MAIN CONTAINER (background-image) */
+  .main {
+    width: 100vw;
+    height: 100vh;
+    /* bg image */
+    background-image: url(../img/bg_image.jpg);
+    background-size: cover;
+  }
+
+  /* HOME CONTAINER */
+  .home {
+    margin: 0 auto;
+    width: 60vw;
+    height: 80vh;
+    /* position */
+    position: relative;
+  }
+
+  /* LOGO */
+  .logo {
+    width: 10vw;
+    height: 7vh;
+    /* position */
+    position: relative;
+    top: 4vh;
+  }
+
+  /* NAVIGATION */
+  .navigation {
+    width: 35vw;
+    height: 4vh;
+    /* position */
+    position: absolute;
+    top: 7.5vh;
+    right: 0;
+    /* display flex */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .navLink {
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .navLink:hover {
+    border-bottom: 1px solid white;
+  }
+
+  /* CONTAINER */
+  .container {
+    width: 59vw;
+    height: 60vh;
+    /* position */
+    position: absolute;
+    bottom: 0;
+    /* display flex */
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* TEXT */
+  /* text */
+  .text {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .header {
+    height: 40%;
+    display: flex;
+    align-items: center;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    cursor: pointer;
+  }
+
+  .text-long {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  /* buttons */
+  .buttons {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .learnMore {
+    width: 40%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: green;
+  }
+
+  .learnMore:active {
+    background-color: rgba(0, 128, 0, 0.658);
+  }
+
+  .getTheApp {
+    margin-left: 2vw;
+    width: 40%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: dodgerblue;
+  }
+
+  .getTheApp:active {
+    background-color: rgba(30, 143, 255, 0.637);
+  }
+
+  /* PHONES */
+  .phone {
+    width: 50%;
+    height: 100%;
+    position: relative;
+  }
+
+  .phone1 {
+    width: 60%;
+    height: 97%;
+    position: absolute;
+    right: 3rem;
+    top: 0;
+  }
+
+  .phone2 {
+    width: 60%;
+    height: 97%;
+    position: absolute;
+    left: 15%;
+    bottom: 0;
+    z-index: 100%;
+    top: 3rem;
+  }
+}

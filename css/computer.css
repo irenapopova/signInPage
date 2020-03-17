@@ -1,0 +1,167 @@
+/* MEDIA QUERIES For large devices (laptops/desktops, 992px and up)  */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+
+  /* MAIN CONTAINER (background image) */
+  .main {
+    width: 100vw;
+    height: 100vh;
+    /* bg image */
+    background-image: url(../img/bg_image.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: aqua;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+  }
+
+  /* HOME CONTAINER */
+  .home {
+    margin: 0 auto;
+    width: 70vw;
+    height: 80vh;
+    /* positioning */
+    position: relative;
+  }
+
+  /* LOGO */
+  .logo {
+    width: 12vw;
+    height: 7vh;
+    /* position */
+    position: relative;
+    top: 4vh;
+  }
+
+  /* NAVIGATION  MENU */
+  .navigation {
+    width: 40vw;
+    height: 5vh;
+    /* position */
+    position: absolute;
+    top: 7.5vh;
+    right: 0;
+    /* USING display flex */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .navLink {
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .navLink:hover {
+    border-bottom: 1px solid white;
+  }
+
+  /* CONTAINER */
+  .container {
+    width: 69vw;
+    height: 55vh;
+    /* position */
+    position: absolute;
+    bottom: 0;
+    /* display flex */
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* TEXT */
+
+  .text {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .header {
+    height: 40%;
+    display: flex;
+    align-items: center;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+    cursor: pointer;
+  }
+
+  .text-long {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+
+  /* INFO buttons */
+  .buttons {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .learnMore {
+    width: 40%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: green;
+  }
+
+  .learnMore:active {
+    background-color: rgba(0, 128, 0, 0.658);
+  }
+
+  .getTheApp {
+    width: 40%;
+    height: 50%;
+    margin-left: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: dodgerblue;
+  }
+
+  .getTheApp:active {
+    background-color: rgba(30, 143, 255, 0.637);
+  }
+
+  /* PHONES */
+  .phone {
+    width: 50%;
+    height: 100%;
+    position: relative;
+  }
+
+  .phone1 {
+    width: 60%;
+    height: 97%;
+    position: absolute;
+    right: 0;
+  }
+
+  .phone2 {
+    width: 60%;
+    height: 97%;
+    position: absolute;
+    left: 15%;
+    bottom: 0;
+  }
+}
