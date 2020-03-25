@@ -144,10 +144,13 @@
   }
 
   /* PHONES */
-  .phone {
+  .phone-pics {
     width: 50%;
     height: 100%;
     position: relative;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
   }
 
   .phone1 {

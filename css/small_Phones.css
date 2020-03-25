@@ -1,5 +1,9 @@
 /* Extra small devices (for different phones sizes, 600px and down)  */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 440px) {
+  main {
+    margin-top: 5rem;
+  }
+
 
   /* MAIN CONTAINER (positioning the background-image) */
   .main {
@@ -62,7 +66,10 @@
     bottom: 0;
     /* display flex */
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    padding-right: 5rem;
+    margin-top: 5rem;
   }
 
   /* TEXT */
@@ -133,10 +140,12 @@
   }
 
   /* PHONES */
-  .phone {
+  .phone-pics {
     display: none;
-    width: 50%;
+    width: 100%;
     position: relative;
-    height: 100%;
+    height: 80%;
+    min-width: 80vw;
+    padding-bottom: 100%;
   }
 }

@@ -1,47 +1,465 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 16px;
-    font-family: "Roboto", sans-serif;
-    color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  color: white;
 }
 
 :root {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 body {
-    background-image: url(../img/bg_image.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-    background-color: steelblue;
-    height: 100%;
-    width: 100%;
-    min-height: 100vh;
-    min-width: 100vw;
-    font-family: "Roboto", sans-serif;
-    display: flex;
-    justify-content: center;
-    color: #fff;
+  background-image: url();
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: steelblue;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  min-width: 100vw;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+a:hover,
+a:active,
+a:focus,
+input:hover,
+input:active,
+input:focus,
+button:hover,
+button:active,
+button:focus {
+  outline: 0;
 }
 
 a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 a:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 h1 {
-    font-size: 2.5rem;
-    padding-bottom: 2.5rem;
+  font-size: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 p {
-    padding-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+/* ==============NAVIGATION ==================== */
+
+/* =========top-nav bar ==================*/
+
+.large-nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  z-index: 1000;
+}
+
+nav li {
+  list-style-type: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding-left: 1rem;
+  display: inline;
+}
+
+nav img {
+  max-width: 13rem;
+}
+
+#hamburger {
+  display: none;
+  font-size: 10px;
+}
+
+.line-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  width: 4em;
+  height: 3em;
+  position: relative;
+}
+
+.line {
+  height: 0.2rem;
+  width: 100%;
+  background-color: lightgray;
+}
+
+#one,
+#two,
+#three {
+  position: absolute;
+}
+
+#one {
+  top: 0;
+}
+
+#two {
+  opacity: 1;
+}
+
+#three {
+  bottom: 0;
+}
+
+/*======animation  ===========*/
+.animate.cross-paths-into-x#one {
+  animation-name: cross-paths-into-x-one;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.animate.cross-paths-into-x#two {
+  animation-name: cross-paths-into-x-two;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.animate.cross-paths-into-x#three {
+  animation-name: cross-paths-into-x-three;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.rev-animate.cross-paths-into-x#one {
+  animation-name: rev-cross-paths-into-x-one;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.rev-animate.cross-paths-into-x#two {
+  animation-name: rev-cross-paths-into-x-two;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+
+.rev-animate.cross-paths-into-x#three {
+  animation-name: rev-cross-paths-into-x-three;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+/*======== SLIDE-IN-MENU NAVIGATION==================*/
+
+#slide-in-menu {
+  position: absolute;
+  right: -90rem;
+  top: -1rem;
+  margin-right: 2rem;
+  background-color: rgba(25, 25, 25, 0.8);
+  z-index: 1000;
+  display: none;
+}
+
+#slide-in-menu ul {
+  padding: 0 3rem 0 0;
+}
+
+#slide-in-menu li {
+  display: block;
+  text-align: right;
+  padding-bottom: 1rem;
+}
+
+#slide-in-menu.slide {
+  display: block;
+  right: -10rem;
+  opacity: 0;
+  animation-name: slide-in-nav;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+#slide-in-menu.rev-slide {
+  display: block;
+  right: -10;
+  animation-name: rev-slide-in-nav;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  opacity: 0;
+}
+
+
+/* ============ MAIN CONTENT AREA ======*/
+
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-right: 5rem;
+  margin-top: 5rem;
+}
+
+
+
+
+#nav-menu {
+  position: relative;
+  transform: translateX(-100vw);
+  opacity: 0;
+  z-index: 10;
+  transition: transform .5s ease, opacity ease .2s;
+}
+
+#nav-menu.now-active {
+  transform: translateX(0);
+  transition: transform .5s ease, opacity ease .2s;
+  opacity: 1;
+  background-color: #eaeaea;
+}
+
+.nav-list {
+  padding: 10px;
+  list-style-type: none;
+  font-size: 2em;
+}
+
+
+
+
+
+
+.menu ul {
+  /* Overwriting the default properties */
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  /* General flex container with centered child elements */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu ul {
+  /* Overwriting the default properties */
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  /* General flex container with centered child elements */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Positioning and sizing */
+  position: fixed;
+  top: -100vh;
+  left: 0;
+  width: 100vw;
+}
+
+.menu li {
+  /* Background gradient style */
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+
+  /* General flex container with centered child elements */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Sizing */
+  height: 100vh;
+  width: 20vw;
+}
+
+.menu.open li {
+  transform: translateY(100vh);
+}
+
+/*The animation of hamburger menu*/
+
+.menu li {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* can also add a nice effect by adding a transition-delay to the individual li tags using the :nth-of-type selector:*/
+
+.menu li:nth-of-type(2) {
+  transition-delay: 0.025s;
+}
+
+.menu li:nth-of-type(3) {
+  transition-delay: 0.05s;
+}
+
+.menu li:nth-of-type(4) {
+  transition-delay: 0.075s;
+}
+
+.menu li:nth-of-type(5) {
+  transition-delay: 0.1s;
+}
+
+@media (max-width: 768px) {
+  .menu ul {
+    flex-direction: column;
+    top: 0;
+    left: -100vw;
+  }
+
+  .menu li {
+    height: 20vh;
+    width: 100vw;
+  }
+
+  .menu.open li {
+    transform: translateX(100vw);
+  }
+}
+
+/* The @media rule is used to define different style rules for different media types/devices, in our case we have only one (when the screen's max width is 768px), but you can set multiple ones if you want/need.
+
+The flex-direction property specifies the direction of the items in the .menu ul. Setting it to column will display them vertically (stacked).
+
+Finally, lets style the links within the li tags:*/
+
+.menu li a {
+  color: #fff;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.menu li a:hover {
+  text-decoration: underline;
+}
+
+/* animation keyframes */
+
+@keyframes cross-paths-into-x-one {
+  from {
+    top: 0;
+    transform: rotate(0deg);
+  }
+
+  to {
+    top: 1.4em;
+    transform: rotate(135deg);
+  }
+}
+
+@keyframes cross-paths-into-x-two {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes cross-paths-into-x-three {
+  from {
+    bottom: 0;
+    transform: rotate(0deg);
+  }
+
+  to {
+    bottom: 1.2em;
+    transform: rotate(-135deg);
+  }
+}
+
+@keyframes rev-cross-paths-into-x-one {
+  from {
+    top: 1.4em;
+    transform: rotate(135deg);
+  }
+
+  to {
+    top: 0;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rev-cross-paths-into-x-two {
+  0% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rev-cross-paths-into-x-three {
+  from {
+    bottom: 1.2em;
+    transform: rotate(-135deg);
+  }
+
+  to {
+    bottom: 0;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes slide-in-nav {
+  from {
+    right: -90rem;
+    opacity: 0;
+  }
+
+  to {
+    right: -2rem;
+    opacity: 1;
+  }
+}
+
+@keyframes rev-slide-in-nav {
+  from {
+    right: -2rem;
+    opacity: 1;
+  }
+
+  to {
+    right: -90rem;
+    opacity: 0;
+  }
 }

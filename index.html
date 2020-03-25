@@ -14,71 +14,132 @@
   <link rel="stylesheet" href="./css/largeMobile.css" />
   <link rel="stylesheet" href="./css/smallMobile.css" />
   <link href="dist/hamburgers.css" rel="stylesheet">
-  <title>SignIn Page</title>
+  <title>SignIn Responsive Page</title>
 </head>
 
 <!-- BODY -->
 
 <body>
+  <!-- MAIN LARGE NAVIGATION MENU -->
   <div class="main">
-    <div class="home">
+    <nav class="large-nav">
       <img class="logo" src="./img/logo_1.png" alt="logo" />
-
-      <!-- MAIN NAVIGATION-->
-
-      <!-- [NAVIGATION BAR] -->
-
-      <nav id="page-nav">
-
-        <!-- [THE HAMBURGER MENU] -->
-        <!-- 
-        <label for="hamburger">&#9776;</label>
-        <input type="checkbox" id="hamburger" />
-
+      <div id="menu">
         <ul>
-          <li><a href="products.html">PRODUCTS</a></li>
-          <li><a href="prices.html">PRICES</a></li>
-          <li><a href="blog.html">BLOG</a></li>
-          <li><a href="team.html">TEAM</a></li>
-          <li><a href="login.html">LOGIN</a></li>
-          <li><a href="signup.html">SIGNUP</a></li>
+          <li><a href="#">products</a></li>
+          <li><a href="#">prices</a></li>
+          <li><a href="#">blog</a></li>
+          <li><a href="#">team</a></li>
+          <li><a href="#">login</a></li>
+          <li><a href="#">sign up</a></li>
+        </ul>
+      </div>
+      <!--HAMBURGER MENU-->
+      <button id="hamburger">
+        <div class="line-holder">
+          <div class="line cross-paths-into-x" id="one"></div>
+          <div class="line cross-paths-into-x" id="two"></div>
+          <div class="line cross-paths-into-x" id="three"></div>
+        </div>
+      </button>
+    </nav>
+  </div>
+
+  <script>
+    hamburger.onclick = function () {
+      console.log("yo");
+      document.getElementById("one");
+      document.getElementById("two");
+      document.getElementById("three");
+      var slide = document.getElementById("slide-in-menu");
+      if (one.classList.contains("animate") == false) {
+        one.classList.add("animate");
+        two.classList.add("animate");
+        three.classList.add("animate");
+        one.classList.remove("rev-animate");
+        two.classList.remove("rev-animate");
+        three.classList.remove("rev-animate");
+        slide.classList.add("slide");
+        slide.classList.remove("rev-slide");
+      } else {
+        one.classList.remove("animate");
+        two.classList.remove("animate");
+        three.classList.remove("animate");
+        one.classList.add("rev-animate");
+        two.classList.add("rev-animate");
+        three.classList.add("rev-animate");
+        slide.classList.remove("slide");
+        slide.classList.add("rev-slide");
+      }
+    };
+  </script>
+
+  <div class="container">
+    <main>
+      <nav id="slide-in-menu" class="slider">
+        <ul>
+          <li><a href="#">products</a></li>
+          <li><a href="#">prices</a></li>
+          <li><a href="#">blog</a></li>
+          <li><a href="#">team</a></li>
+          <li><a href="#">login</a></li>
+          <li><a href="#">sign up</a></li>
         </ul>
       </nav>
 
-    -->
-        <div class="navigation">
 
-          <div class="navLink">PRODUCTS</div>
-          <div class="navLink">PRICES</div>
-          <div class="navLink">BLOG</div>
-          <div class="navLink">TEAM</div>
-          <div class="navLink">LOGIN</div>
-          <div class="navLink">SIGN UP</div>
+
+      <!-- MAIN CONTAINER -->
+      <div class="container">
+        <div class="text">
+          <div class="header">
+            <h2>Make your Startup web with our template,</h2>
+          </div>
+          <div class="text-long">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+            distinctio hic voluptatem, quibusdam placeat, odit consectetur
+            odio minima quaerat assumenda Illum distinctio hic
+          </div>
+
+          <!-- BUTTONS -->
+          <div class="buttons">
+            <div class="learnMore">Learn More</div>
+            <div class="getTheApp">Get the App</div>
+          </div>
         </div>
 
-        <!-- MAIN CONTAINER -->
-        <div class="container">
-          <div class="text">
-            <div class="header">
-              <h2>Make your Startup web with our template,</h2>
-            </div>
-            <div class="text-long">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-              distinctio hic voluptatem, quibusdam placeat, odit consectetur
-              odio minima quaerat assumenda Illum distinctio hic
-            </div>
-            <div class="buttons">
-              <div class="learnMore">Learn More</div>
-              <div class="getTheApp">Get the App</div>
-            </div>
-          </div>
+        <!-- PICS-->
+        <section class="phone-pics">
           <div class="phone">
             <img class="phone1" src="./img/phone_1.png" alt="phone1" />
             <img class="phone2" src="./img/phone_2.png" alt="phone2" />
           </div>
-        </div>
-    </div>
+        </section>
+
+    </main>
   </div>
+  </div>
+  </div>
+
+
+  <script>
+    var slide = document.getElementById("slide-in-menu");
+    document.getElementById("one");
+    document.getElementById("two");
+    document.getElementById("three");
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 750)
+        slide.classList.remove("slide"),
+        one.classList.remove("animate"),
+        two.classList.remove("animate"),
+        three.classList.remove("animate"),
+        one.classList.remove("rev-animate"),
+        two.classList.remove("rev-animate"),
+        three.classList.remove("rev-animate");
+    });
+  </script>
 </body>
+
+<script type="text/javascript" src="script.js"></script>
 
 </html>
